@@ -1,0 +1,827 @@
+$color-text:#312E2E;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+
+@function rem($value){
+  @return ($value/16)+rem;
+}
+body{
+    color: $color-text;
+    background-color: #E9E1D1;
+    font-family: 'Noto Serif JP', serif;
+    // font-family: UDタイポス510 Std;
+}
+.inner{
+    width: 95%;
+    max-width: 1920px;
+    margin: 0 auto;
+    text-align: center;
+}
+img{
+    height: auto;
+    max-width: 100%;
+}
+li{
+    list-style: none;
+}
+main{
+    overflow: hidden;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    width: 100%;
+    padding: rem(10) 0 rem(20) 0;
+    background-color: #f0ede6;
+}
+
+.splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#f0ede6;
+    text-align:center;
+    color:#fff;
+    &__logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+  }
+}
+
+.splash_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#splash_logo img {
+  width:260px;
+  display: block;
+}
+.fastnav{
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__text{
+        font-size: 40px;
+    }
+
+    &__contents{
+        padding-top: 60px;
+        display: block;
+        transition: 0.3s;
+        color: $color-text;
+        text-decoration: none;
+        font-size: rem(16);
+    }
+    &__taiyou{
+        background: url(../rogo/2x/taiyou@2x.png) no-repeat center bottom 25px/0px;
+    }
+    &__tonbo{
+        background: url(../rogo/tonbo.svg) no-repeat center bottom 25px/0px;
+    }
+    &__coffe{
+        background: url(../rogo/SVG/coffe.svg)no-repeat center bottom 25px/0px;
+    }
+    &__map{
+        background: url(../rogo/SVG/map.svg)no-repeat center bottom 25px/0px;
+    }
+    &__contents:hover{
+        background-size: 52px;
+    }
+    &__item{
+        position: relative;
+        margin: 0 8%;
+    }
+}
+.fastview{
+    // background: url(../image/bgfast.png) no-repeat center center;
+    text-align: center;
+    margin: rem(40) 0 rem(145) 0;
+    position: relative;
+    &__img{
+        margin: 0 auto;
+        padding-top:25vh ;
+        width: 350px;
+    }
+    &__text{
+        font-family: ヒラギノUD明朝 StdN;
+        text-shadow: 1px  1px 1px #a89e9e,
+      -3px  1px 1px #707070,
+       1px -3px 1px #707070,
+      -3px -3px 1px #707070,
+       1px  -1px 1px #707070,
+       -1px  1px 1px #707070,
+      -3px  -1px 1px #707070,
+       -1px -3px 1px #707070;
+        font-size: 30px;
+        padding-bottom: rem(140);
+        color: #fff;
+    }
+    // &__container{
+    //     z-index: 3;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%,-50%);
+    // }
+}
+.sliders {
+  position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 70vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+.slider-item01 {
+    background:url(../image/bgfast.png);
+}
+
+.slider-item02 {
+    background:url(../image/images/IMG_20211111_071922_515.png);
+}
+
+.slider-item03 {
+    background:url(../image/gaikan.jpg);
+}
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:70vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+.slick-dots li {
+    display:none;
+	margin:0 5px;
+}
+
+
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+.explanation{
+    position: relative;
+    &__img{
+        &__1{
+            width: 50px;
+            position: absolute;
+            top: 1.5%;
+            left: 30%;
+        }
+        &__2{
+            width: 50px;
+            position: absolute;
+            top: 1.5%;
+            right: 30%;
+        }
+    }
+}
+.morning{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: rem(80) 0 rem(175);
+    &__image{
+        margin-right: 15%;
+    }
+    &__text{
+        margin-left: 15%;
+    }
+
+}
+.left{
+    flex-direction: row-reverse;
+    &__text{
+        margin: 0 15% 0 0 ;
+    }
+}
+.cloud{
+    position: relative;
+    &__syokuzi{
+        width: 70%;
+    }
+    &__big{
+        position: absolute;
+        left: -20px;
+        bottom: -20px;
+        width: 20%;
+
+    }
+    &__small{
+        position: absolute;
+        left: -80px;
+        bottom: -80px;
+        width: 10%;
+
+    }
+    &__right{
+        &__big{
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 20%;
+        }
+        &__small{
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 10%;
+        }
+    }
+
+}
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.fadeUpTrigger{
+    opacity: 0;
+}
+
+.menue{
+    &__title{
+        font-size: rem(31);
+        margin-bottom: rem(20);
+        color: #513822;
+    }
+    &__food{
+        margin: rem(20) 0 rem(20);
+        font-size: rem(16);
+    }
+}
+
+.content{
+    margin-bottom: rem(350);
+    &__title{
+        padding-top: rem(30);
+        margin-bottom: rem(61);
+    }
+    &__flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img{
+        width: 35%;
+    }
+}
+
+//店の様子のアニメーション
+
+
+.imagesUp{
+animation-name:imageAnime;
+animation-duration:1.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes imageAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.commitment{
+    position: relative;
+    &__text{
+        margin-bottom: rem(40);
+    }
+    &__img{
+        &__1{
+            width: 50px;
+            position: absolute;
+            top: 5%;
+            left: 30%;
+        }
+        &__2{
+            width: 50px;
+            position: absolute;
+            top: 5%;
+            right: 30%;
+        }
+
+    }
+}
+.exterior{
+    position: relative;
+    &__img{
+        &__1{
+            width: 50px;
+            position: absolute;
+            top: 6%;
+            left: 30%;
+        }
+        &__2{
+            width: 50px;
+            position: absolute;
+            top: 6%;
+            right: 30%;
+        }
+    }
+}
+.images{
+    &__list{
+        position: relative;
+        list-style: none;
+        height: 50vw;
+    }
+    &__item{
+        position: absolute;
+        opacity: 0;
+    }
+    &__1{
+        top: 25%;
+        left: 1%;
+        width: 25%;
+    }
+    &__2{
+        top: 10%;
+        left: 16%;
+        width: 23%;
+    }
+    &__3{
+        bottom: 10%;
+        left: 17%;
+        width: 26%;
+    }
+    &__4{
+        top: 30%;
+        left: 36%;
+        width: 29%;
+    }
+    &__5{
+        bottom:-10%;
+        left: 39%;
+        width: 22%;
+    }
+    &__6{
+        top: 8%;
+        right: 18%;
+        width: 22%;
+    }
+    &__7{
+        bottom: 5%;
+        right: 20%;
+        width: 22%;
+    }
+    &__8{
+        bottom: 33%;
+        right: 1%;
+        width: 20%;
+    }
+}
+.mapicon{
+    position: relative;
+    &__img{
+        &__1{
+            width: 50px;
+            position: absolute;
+            top: 5%;
+            left: 30%;
+        }
+        &__2{
+            width: 50px;
+            position: absolute;
+            top: 5%;
+            right: 30%;
+        }
+
+    }
+
+}
+.access{
+    &__map{
+        margin-right: 5%;
+    }
+    &__addres{
+        text-align: left;
+        margin-left: 5%;
+        &__text{
+            margin-bottom: rem(35);
+        }
+    }
+}
+iframe{
+    height: 25em;
+    width: 40%;
+}
+footer{
+    background-color: #fff;
+}
+.footer{
+    padding: rem(130) 0 rem(105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+        width: 100px;
+        height: auto;
+        margin-right: 20%;
+    }
+}
+.v_line_fix {
+  width: 1px;
+  height: 230px;
+  background-color: black;
+}
+.footernav{
+    margin-left: 20%;
+}
+.footerlist{
+    &__item{
+        margin: 20px 0 20px;
+    }
+    &__contents{
+        color: $color-text;
+        margin: rem(40) 0;
+        text-decoration: none;
+    }
+}
+.button{
+    position: fixed;
+	right: -100px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(100px);
+    &__img{
+        width: 15%;
+    }
+}
+.button.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+.button.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+
+// /*検証のためのCSS*/
+// section{
+// padding: 500px 0;
+// }
+small{
+    display: block;
+    padding-bottom: rem(20);
+}
+
+
+@media (max-width:599px){
+    body{
+        margin: 0 auto;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .inner{
+        width: 90%;
+        max-width: 428px;
+    }
+    .header{
+    &__img{
+        width: 65%;
+    }
+}
+    .fastnav{
+        &__item{
+            font-size: 14px;
+            margin: 0 4%;
+        }
+        &__img{
+            width: 13.0841121%;
+        }
+        &__contents:hover{
+        background-size: 42px;
+    }
+    }
+
+    .morning{
+        display: inline;
+        margin: rem(20) 0 rem(90);
+        &__text{
+            margin: rem(40) 0 rem(120) 0
+        }
+    }
+    .content{
+        &__flex{
+            display: block;
+        }
+
+    }
+    .explanation{
+        &__text{
+            margin-bottom: rem(60);
+        }
+        &__img{
+            &__1{
+                width: 60px;
+                position: absolute;
+                top: 1%;
+                left: 7%;
+            }
+            &__2{
+                width: 60px;
+                position: absolute;
+                top: 1%;
+                right: 7%;
+            }
+        }
+    }
+    .fastnav{
+        &__contents{
+            font-size: rem(14);
+        }
+    }
+    .slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:50vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+.sliders {
+  position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 50vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+    .fastview{
+        // background: url(../image/bgfast.png) no-repeat center center;
+        margin: rem(40) 0 rem(60) 0;
+        &__img{
+            padding-top:45%;
+            width: 200px;
+            margin: 0 auto;
+        }
+        &__text{
+            margin-top: 20px;
+            font-size: rem(19);
+            padding-bottom: rem(40);
+        }
+    }
+    .menue{
+        &__food{
+            margin: rem(10) 0 rem(10);
+        }
+    }
+    .cloud{
+    position: relative;
+    &__syokuzi{
+        width: 45%;
+    }
+    &__big{
+        position: absolute;
+        left: 40px;
+        bottom: -50px;
+        width: 15%;
+
+    }
+    &__small{
+        position: absolute;
+        left: 0px;
+        bottom: -120px;
+        width: 10%;
+
+    }
+    &__right{
+        &__big{
+            position: absolute;
+            bottom: -50px;
+            right: 40px;
+            width: 15%;
+        }
+        &__small{
+            position: absolute;
+            bottom: -120px;
+            right: 0px;
+            width: 10%;
+        }
+    }
+    }
+    .left{
+    &__text{
+        margin: rem(30) 0 rem(90) 0  ;
+    }
+}
+.exterior{
+    position: relative;
+    &__img{
+        &__1{
+            width: 60px;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+        }
+        &__2{
+            width: 60px;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+        }
+    }
+}
+
+.images{
+    &__list{
+        position: relative;
+        list-style: none;
+        height: 50vw;
+    }
+    &__item{
+        position: absolute;
+        opacity: 0;
+    }
+    &__1{
+        top: 20%;
+        left: 0;
+        width: 30%;
+    }
+    &__2{
+        top: 5%;
+        left: 15%;
+        width: 28%;
+    }
+    &__3{
+        bottom: 5%;
+        left: 16%;
+        width: 31%;
+    }
+    &__4{
+        top: 25%;
+        left: 35%;
+        width: 35%;
+    }
+    &__5{
+        bottom: -20%;
+        left: 35%;
+        width: 27%;
+    }
+    &__6{
+        top: 3%;
+        right: 17%;
+        width: 27%;
+    }
+    &__7{
+        bottom: 0;
+        right: 18%;
+        width: 27%;
+    }
+    &__8{
+        bottom: 25%;
+        right: 0;
+        width: 25%;
+    }
+}
+
+.mapicon{
+    &__img{
+        &__1{
+            width: 60px;
+            position: absolute;
+            left: 10%;
+        }
+        &__2{
+            width: 60px;
+            position: absolute;
+            right: 10%;
+        }
+    }
+}
+
+.access{
+    &__map{
+        margin-right: 5%;
+    }
+    &__addres{
+        text-align: left;
+        margin-left: 5%;
+        &__text{
+            margin-bottom: rem(35);
+        }
+    }
+}
+
+
+.commitment{
+    &__text{
+        font-size: 14px;
+    }
+    &__img{
+        &__1{
+            width: 60px;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+        }
+        &__2{
+            width: 60px;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+        }
+
+    }
+}
+    iframe{
+    height: 20em;
+    width: 95%;
+}
+.content{
+    margin-bottom: rem(250);
+    &__text{
+        font-size: 14px;
+    }
+}
+    .access{
+        &__map{
+        margin-right: 0;
+        }
+        &__box:first-child{
+            margin-right: rem(15);
+    }
+    &__addres{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+        margin-left: 0;
+        &__text{
+            text-align: left;
+            font-size: rem(14);
+            margin: 0 ;
+            margin-bottom: rem(20);
+        }
+    }
+    }
+    .footernav{
+    margin-left: 5%;
+}
+    .footer{
+    padding: rem(40) 0 rem(20);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__img{
+        margin-right: 5%;
+        width: 100px;
+        height: auto;
+    }
+}
+}

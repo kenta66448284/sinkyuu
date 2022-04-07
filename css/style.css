@@ -1,0 +1,831 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap");
+body {
+  color: #312E2E;
+  background-color: #E9E1D1;
+  font-family: "Noto Serif JP", serif;
+}
+
+.inner {
+  width: 95%;
+  max-width: 1920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  width: 100%;
+  padding: 0.625rem 0 1.25rem 0;
+  background-color: #f0ede6;
+}
+
+.splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #f0ede6;
+  text-align: center;
+  color: #fff;
+}
+.splash__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.splash_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#splash_logo img {
+  width: 260px;
+  display: block;
+}
+
+.fastnav__list {
+  display: flex;
+  justify-content: center;
+}
+.fastnav__text {
+  font-size: 40px;
+}
+.fastnav__contents {
+  padding-top: 60px;
+  display: block;
+  transition: 0.3s;
+  color: #312E2E;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.fastnav__taiyou {
+  background: url(../rogo/2x/taiyou@2x.png) no-repeat center bottom 25px/0px;
+}
+.fastnav__tonbo {
+  background: url(../rogo/tonbo.svg) no-repeat center bottom 25px/0px;
+}
+.fastnav__coffe {
+  background: url(../rogo/SVG/coffe.svg) no-repeat center bottom 25px/0px;
+}
+.fastnav__map {
+  background: url(../rogo/SVG/map.svg) no-repeat center bottom 25px/0px;
+}
+.fastnav__contents:hover {
+  background-size: 52px;
+}
+.fastnav__item {
+  position: relative;
+  margin: 0 8%;
+}
+
+.fastview {
+  text-align: center;
+  margin: 2.5rem 0 9.0625rem 0;
+  position: relative;
+}
+.fastview__img {
+  margin: 0 auto;
+  padding-top: 25vh;
+  width: 350px;
+}
+.fastview__text {
+  font-family: ヒラギノUD明朝 StdN;
+  text-shadow: 1px 1px 1px #a89e9e, -3px 1px 1px #707070, 1px -3px 1px #707070, -3px -3px 1px #707070, 1px -1px 1px #707070, -1px 1px 1px #707070, -3px -1px 1px #707070, -1px -3px 1px #707070;
+  font-size: 30px;
+  padding-bottom: 8.75rem;
+  color: #fff;
+}
+
+.sliders {
+  position: relative;
+  z-index: 1;
+  /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+  height: 70vh;
+  /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+.slider-item01 {
+  background: url(../image/bgfast.png);
+}
+
+.slider-item02 {
+  background: url(../image/images/IMG_20211111_071922_515.png);
+}
+
+.slider-item03 {
+  background: url(../image/gaikan.jpg);
+}
+
+.slider-item {
+  width: 100%;
+  /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height: 70vh;
+  /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  background-repeat: no-repeat;
+  /*背景画像をリピートしない*/
+  background-position: center;
+  /*背景画像の位置を中央に*/
+  background-size: cover;
+  /*背景画像が.slider-item全体を覆い表示*/
+}
+
+.slick-dots li {
+  display: none;
+  margin: 0 5px;
+}
+
+.slick-dots .slick-active button {
+  background: #333;
+  /*ドットボタンの現在地表示の色*/
+}
+
+.explanation {
+  position: relative;
+}
+.explanation__img__1 {
+  width: 50px;
+  position: absolute;
+  top: 1.5%;
+  left: 30%;
+}
+.explanation__img__2 {
+  width: 50px;
+  position: absolute;
+  top: 1.5%;
+  right: 30%;
+}
+
+.morning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0 10.9375rem;
+}
+.morning__image {
+  margin-right: 15%;
+}
+.morning__text {
+  margin-left: 15%;
+}
+
+.left {
+  flex-direction: row-reverse;
+}
+.left__text {
+  margin: 0 15% 0 0;
+}
+
+.cloud {
+  position: relative;
+}
+.cloud__syokuzi {
+  width: 70%;
+}
+.cloud__big {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: 20%;
+}
+.cloud__small {
+  position: absolute;
+  left: -80px;
+  bottom: -80px;
+  width: 10%;
+}
+.cloud__right__big {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 20%;
+}
+.cloud__right__small {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 10%;
+}
+
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+.menue__title {
+  font-size: 1.9375rem;
+  margin-bottom: 1.25rem;
+  color: #513822;
+}
+.menue__food {
+  margin: 1.25rem 0 1.25rem;
+  font-size: 1rem;
+}
+
+.content {
+  margin-bottom: 21.875rem;
+}
+.content__title {
+  padding-top: 1.875rem;
+  margin-bottom: 3.8125rem;
+}
+.content__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content__img {
+  width: 35%;
+}
+
+.imagesUp {
+  -webkit-animation-name: imageAnime;
+          animation-name: imageAnime;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes imageAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.commitment {
+  position: relative;
+}
+.commitment__text {
+  margin-bottom: 2.5rem;
+}
+.commitment__img__1 {
+  width: 50px;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+}
+.commitment__img__2 {
+  width: 50px;
+  position: absolute;
+  top: 5%;
+  right: 30%;
+}
+
+.exterior {
+  position: relative;
+}
+.exterior__img__1 {
+  width: 50px;
+  position: absolute;
+  top: 6%;
+  left: 30%;
+}
+.exterior__img__2 {
+  width: 50px;
+  position: absolute;
+  top: 6%;
+  right: 30%;
+}
+
+.images__list {
+  position: relative;
+  list-style: none;
+  height: 50vw;
+}
+.images__item {
+  position: absolute;
+  opacity: 0;
+}
+.images__1 {
+  top: 25%;
+  left: 1%;
+  width: 25%;
+}
+.images__2 {
+  top: 10%;
+  left: 16%;
+  width: 23%;
+}
+.images__3 {
+  bottom: 10%;
+  left: 17%;
+  width: 26%;
+}
+.images__4 {
+  top: 30%;
+  left: 36%;
+  width: 29%;
+}
+.images__5 {
+  bottom: -10%;
+  left: 39%;
+  width: 22%;
+}
+.images__6 {
+  top: 8%;
+  right: 18%;
+  width: 22%;
+}
+.images__7 {
+  bottom: 5%;
+  right: 20%;
+  width: 22%;
+}
+.images__8 {
+  bottom: 33%;
+  right: 1%;
+  width: 20%;
+}
+
+.mapicon {
+  position: relative;
+}
+.mapicon__img__1 {
+  width: 50px;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+}
+.mapicon__img__2 {
+  width: 50px;
+  position: absolute;
+  top: 5%;
+  right: 30%;
+}
+
+.access__map {
+  margin-right: 5%;
+}
+.access__addres {
+  text-align: left;
+  margin-left: 5%;
+}
+.access__addres__text {
+  margin-bottom: 2.1875rem;
+}
+
+iframe {
+  height: 25em;
+  width: 40%;
+}
+
+footer {
+  background-color: #fff;
+}
+
+.footer {
+  padding: 8.125rem 0 6.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__img {
+  width: 100px;
+  height: auto;
+  margin-right: 20%;
+}
+
+.v_line_fix {
+  width: 1px;
+  height: 230px;
+  background-color: black;
+}
+
+.footernav {
+  margin-left: 20%;
+}
+
+.footerlist__item {
+  margin: 20px 0 20px;
+}
+.footerlist__contents {
+  color: #312E2E;
+  margin: 2.5rem 0;
+  text-decoration: none;
+}
+
+.button {
+  position: fixed;
+  right: -100px;
+  bottom: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+.button__img {
+  width: 15%;
+}
+
+.button.UpMove {
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
+}
+
+@-webkit-keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*　下に下がる動き　*/
+.button.DownMove {
+  -webkit-animation: DownAnime 0.5s forwards;
+          animation: DownAnime 0.5s forwards;
+}
+
+@-webkit-keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+small {
+  display: block;
+  padding-bottom: 1.25rem;
+}
+
+@media (max-width: 599px) {
+  body {
+    margin: 0 auto;
+    font-family: "Noto Serif JP", serif;
+  }
+
+  .inner {
+    width: 90%;
+    max-width: 428px;
+  }
+
+  .header__img {
+    width: 65%;
+  }
+
+  .fastnav__item {
+    font-size: 14px;
+    margin: 0 4%;
+  }
+  .fastnav__img {
+    width: 13.0841121%;
+  }
+  .fastnav__contents:hover {
+    background-size: 42px;
+  }
+
+  .morning {
+    display: inline;
+    margin: 1.25rem 0 5.625rem;
+  }
+  .morning__text {
+    margin: 2.5rem 0 7.5rem 0;
+  }
+
+  .content__flex {
+    display: block;
+  }
+
+  .explanation__text {
+    margin-bottom: 3.75rem;
+  }
+  .explanation__img__1 {
+    width: 60px;
+    position: absolute;
+    top: 1%;
+    left: 7%;
+  }
+  .explanation__img__2 {
+    width: 60px;
+    position: absolute;
+    top: 1%;
+    right: 7%;
+  }
+
+  .fastnav__contents {
+    font-size: 0.875rem;
+  }
+
+  .slider-item {
+    width: 100%;
+    /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height: 50vh;
+    /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+  }
+
+  .sliders {
+    position: relative;
+    z-index: 1;
+    /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+    height: 50vh;
+    /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  }
+
+  .fastview {
+    margin: 2.5rem 0 3.75rem 0;
+  }
+  .fastview__img {
+    padding-top: 45%;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .fastview__text {
+    margin-top: 20px;
+    font-size: 1.1875rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .menue__food {
+    margin: 0.625rem 0 0.625rem;
+  }
+
+  .cloud {
+    position: relative;
+  }
+  .cloud__syokuzi {
+    width: 45%;
+  }
+  .cloud__big {
+    position: absolute;
+    left: 40px;
+    bottom: -50px;
+    width: 15%;
+  }
+  .cloud__small {
+    position: absolute;
+    left: 0px;
+    bottom: -120px;
+    width: 10%;
+  }
+  .cloud__right__big {
+    position: absolute;
+    bottom: -50px;
+    right: 40px;
+    width: 15%;
+  }
+  .cloud__right__small {
+    position: absolute;
+    bottom: -120px;
+    right: 0px;
+    width: 10%;
+  }
+
+  .left__text {
+    margin: 1.875rem 0 5.625rem 0;
+  }
+
+  .exterior {
+    position: relative;
+  }
+  .exterior__img__1 {
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .exterior__img__2 {
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+
+  .images__list {
+    position: relative;
+    list-style: none;
+    height: 50vw;
+  }
+  .images__item {
+    position: absolute;
+    opacity: 0;
+  }
+  .images__1 {
+    top: 20%;
+    left: 0;
+    width: 30%;
+  }
+  .images__2 {
+    top: 5%;
+    left: 15%;
+    width: 28%;
+  }
+  .images__3 {
+    bottom: 5%;
+    left: 16%;
+    width: 31%;
+  }
+  .images__4 {
+    top: 25%;
+    left: 35%;
+    width: 35%;
+  }
+  .images__5 {
+    bottom: -20%;
+    left: 35%;
+    width: 27%;
+  }
+  .images__6 {
+    top: 3%;
+    right: 17%;
+    width: 27%;
+  }
+  .images__7 {
+    bottom: 0;
+    right: 18%;
+    width: 27%;
+  }
+  .images__8 {
+    bottom: 25%;
+    right: 0;
+    width: 25%;
+  }
+
+  .mapicon__img__1 {
+    width: 60px;
+    position: absolute;
+    left: 10%;
+  }
+  .mapicon__img__2 {
+    width: 60px;
+    position: absolute;
+    right: 10%;
+  }
+
+  .access__map {
+    margin-right: 5%;
+  }
+  .access__addres {
+    text-align: left;
+    margin-left: 5%;
+  }
+  .access__addres__text {
+    margin-bottom: 2.1875rem;
+  }
+
+  .commitment__text {
+    font-size: 14px;
+  }
+  .commitment__img__1 {
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  .commitment__img__2 {
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+
+  iframe {
+    height: 20em;
+    width: 95%;
+  }
+
+  .content {
+    margin-bottom: 15.625rem;
+  }
+  .content__text {
+    font-size: 14px;
+  }
+
+  .access__map {
+    margin-right: 0;
+  }
+  .access__box:first-child {
+    margin-right: 0.9375rem;
+  }
+  .access__addres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+  .access__addres__text {
+    text-align: left;
+    font-size: 0.875rem;
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .footernav {
+    margin-left: 5%;
+  }
+
+  .footer {
+    padding: 2.5rem 0 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer__img {
+    margin-right: 5%;
+    width: 100px;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
